@@ -1,75 +1,35 @@
-# React + TypeScript + Vite
+# DevLog & README Architect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Aplicação web para documentar decisões técnicas e gerar arquivos README.md profissionais e padronizados para repositórios técnicos.
 
-Currently, two official plugins are available:
+## 🎯 Problema Enfrentado
+Desenvolvedores frequentemente gastam tempo excessivo formatando documentações em Markdown ou deixam repositórios sem contexto técnico, dificultando a avaliação de recrutadores e bancas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💡 Decisão Técnica & Solução
+Desenvolvimento de uma ferramenta utilitária e reativa 100% client-side (sem dependência de backend/banco de dados) que processa dados estruturados e gera Markdown com preview instantâneo, cópia e download direto.
 
-## React Compiler
+## 🛠️ Tecnologias
+- **React**
+- **TypeScript**
+- **Vite**
+- **Lucide React**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Principais Funcionalidades
+- Visualização em tempo real do Markdown gerado
+- Cópia instantânea para a área de transferência
+- Download automático do arquivo README.md
+- Layout responsivo em modo escuro
 
-## Expanding the ESLint configuration
+## 🚀 Como Rodar Localmente
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Clone este repositório
+git clone https://github.com/seu-usuario/devlog-&-readme-architect.git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+# Instale os pacotes e inicie o ambiente
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+---
+Criado com foco em utilidade real e código aberto.
